@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>桜理祭 LIVE 2026 | 軽音楽部 公式サイト</title>
+  <meta name="description" content="桜理祭 軽音楽部 LIVE 2026 公式サイト。2026年10月31日（土）13:00〜14:30 階段教室にて開催。鳴り響け僕なりの音。">
+  <meta name="theme-color" content="#102E50">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Space+Grotesk:wght@500;700&family=Syne:wght@700;800&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Background Cyber Canvas & Ambient Grid -->
+  <div class="cyber-bg-overlay" aria-hidden="true">
+    <canvas id="cyber-canvas"></canvas>
+    <div class="grid-lines"></div>
+    <div class="scanline"></div>
+  </div>
+
+  <!-- FIXED HEADER / NAVIGATION -->
+  <header id="site-header" class="site-header">
+    <div class="header-container">
+      <a href="#top" class="brand-logo" aria-label="桜理祭 LIVE 2026 TOPへ">
+        <span class="brand-badge">LIVE 2026</span>
+        <span class="brand-title">SAKURASAI <span class="brand-sub">K-ON!</span></span>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav class="desktop-nav" aria-label="メインナビゲーション">
+        <ul class="nav-list">
+          <li><a href="#top" class="nav-link active"><span class="nav-num">01</span>TOP</a></li>
+          <li><a href="#timetable" class="nav-link"><span class="nav-num">02</span>TIMETABLE</a></li>
+          <li><a href="#artists" class="nav-link"><span class="nav-num">03</span>ARTISTS</a></li>
+          <li><a href="#information" class="nav-link"><span class="nav-num">04</span>INFORMATION</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header Status Widget -->
+      <div class="header-status" aria-hidden="true">
+        <span class="status-dot"></span>
+        <span class="status-text">OCT 31 // 階段教室</span>
+      </div>
+
+      <!-- Mobile Menu Toggle Button -->
+      <button id="menu-toggle" class="menu-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="mobile-drawer">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer Menu (Outside Header for Perfect Fixed Overlay) -->
+  <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+    <div class="mobile-drawer-inner">
+      <div class="drawer-header-info">
+        <span class="cyber-tag">// NAVIGATION MENU</span>
+        <button id="drawer-close-btn" class="drawer-close-btn" aria-label="メニューを閉じる">CLOSE [×]</button>
+      </div>
+      <nav class="mobile-nav" aria-label="モバイルナビゲーション">
+        <ul class="mobile-nav-list">
+          <li>
+            <a href="#top" class="mobile-nav-link">
+              <span class="link-number">01</span>
+              <span class="link-title">TOP</span>
+              <span class="link-arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#timetable" class="mobile-nav-link">
+              <span class="link-number">02</span>
+              <span class="link-title">TIMETABLE</span>
+              <span class="link-arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#artists" class="mobile-nav-link">
+              <span class="link-number">03</span>
+              <span class="link-title">ARTISTS</span>
+              <span class="link-arrow">→</span>
+            </a>
+          </li>
+          <li>
+            <a href="#information" class="mobile-nav-link">
+              <span class="link-number">04</span>
+              <span class="link-title">INFORMATION</span>
+              <span class="link-arrow">→</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="drawer-footer-info">
+        <p class="drawer-event-name">桜理祭 軽音楽部 LIVE 2026</p>
+        <p class="drawer-time-place">13:00 - 14:30 @ 階段教室</p>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+    <!-- ==============================================
+         SECTION 01: HERO / ファーストビュー
+         ============================================== -->
+    <section id="top" class="hero-section" aria-label="ファーストビュー">
+      <div class="hero-container">
+        <!-- Top HUD Data Line -->
+        <div class="hero-hud-top" data-anim="fade-in">
+          <div class="hud-item hud-left">
+            <span class="hud-code">// FESTIVAL CODE: SKRS-2026</span>
+            <span class="hud-sep">|</span>
+            <span class="hud-dept">桜理祭 軽音楽部 主催</span>
+          </div>
+          <div class="hud-item hud-right">
+            <span class="hud-pulse-icon"></span>
+            <span class="hud-live-tag">OFFICIAL LIVE STAGE</span>
+          </div>
+        </div>
+
+        <!-- Giant Typography Main Block -->
+        <div class="hero-typography">
+          <div class="hero-tag-kanji" data-anim="fade-in">
+            <span>桜理祭 2026 // STAGE LIVE</span>
+          </div>
+          <div class="typo-line typo-line-1" data-anim="hero-title" data-delay="100">
+            <span class="eng-massive stroke-text">SAKURASAI</span>
+          </div>
+          <div class="typo-line typo-line-2" data-anim="hero-title" data-delay="300">
+            <span class="eng-massive solid-gradient">LIVE</span>
+            <span class="eng-massive year-num">2026</span>
+          </div>
+        </div>
+
+        <!-- Catchphrase & Subheading -->
+        <div class="hero-catch-wrap">
+          <div class="catch-badge">THEME CONCEPT</div>
+          <h1 class="hero-catchphrase">
+            <span class="catch-char-accent">鳴</span>り<span class="catch-char-accent">響</span>け僕なりの音
+          </h1>
+          <p class="catch-en">ECHOES OF OUR AUTHENTIC SOUND // MUSIC FESTIVAL IN SAKURASAI</p>
+        </div>
+
+        <!-- First-View HUD Information Card (一目で日時・会場がわかる) -->
+        <div class="hero-info-hud">
+          <div class="info-hud-grid">
+            <div class="info-hud-col">
+              <span class="info-hud-label">DATE</span>
+              <div class="info-hud-value date-val">
+                <span class="month-day">10.31</span>
+                <span class="day-of-week">SAT</span>
+              </div>
+            </div>
+            <div class="info-hud-col">
+              <span class="info-hud-label">TIME</span>
+              <div class="info-hud-value time-val">
+                <span class="time-main">13:00</span>
+                <span class="time-tilde">〜</span>
+                <span class="time-main">14:30</span>
+              </div>
+            </div>
+            <div class="info-hud-col">
+              <span class="info-hud-label">STAGE</span>
+              <div class="info-hud-value stage-val">
+                <span class="stage-name">階段教室</span>
+                <span class="stage-tag">FREE ENTRANCE</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-hud-accent-line"></div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <a href="#timetable" class="hero-scroll-indicator" aria-label="タイムテーブルへスクロール">
+          <span class="scroll-text">SCROLL DOWN</span>
+          <div class="scroll-cyber-line">
+            <div class="scroll-dot"></div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Cyber Coordinate Watermarks -->
+      <div class="geo-decorations" aria-hidden="true">
+        <span class="geo-point point-tl">+ 001.X</span>
+        <span class="geo-point point-tr">INDEX // 2026 +</span>
+        <span class="geo-point point-bl">+ AUDIO FREQ // ACTIVE</span>
+        <span class="geo-point point-br">SAKURASAI STAGE +</span>
+      </div>
+    </section>
+
+    <!-- TICKER MARQUEE 01 -->
+    <div class="ticker-strip" aria-hidden="true">
+      <div class="ticker-inner">
+        <div class="ticker-content">
+          <span>SAKURASAI LIVE 2026</span>
+          <span class="ticker-dot">•</span>
+          <span>OCTOBER 31 [SAT] 13:00 - 14:30</span>
+          <span class="ticker-dot">•</span>
+          <span>STAGE: 階段教室</span>
+          <span class="ticker-dot">•</span>
+          <span>鳴り響け僕なりの音</span>
+          <span class="ticker-dot">•</span>
+          <span>FEAT. ZAKUZAKU × unitown</span>
+          <span class="ticker-dot">•</span>
+        </div>
+        <div class="ticker-content" aria-hidden="true">
+          <span>SAKURASAI LIVE 2026</span>
+          <span class="ticker-dot">•</span>
+          <span>OCTOBER 31 [SAT] 13:00 - 14:30</span>
+          <span class="ticker-dot">•</span>
+          <span>STAGE: 階段教室</span>
+          <span class="ticker-dot">•</span>
+          <span>鳴り響け僕なりの音</span>
+          <span class="ticker-dot">•</span>
+          <span>FEAT. ZAKUZAKU × unitown</span>
+          <span class="ticker-dot">•</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         SECTION 02: TIMETABLE / タイムテーブル
+         ============================================== -->
+    <section id="timetable" class="timetable-section" aria-label="タイムテーブル">
+      <div class="section-container">
+        <!-- Section Title Header -->
+        <div class="section-title-wrap" data-reveal="header">
+          <div class="section-index">
+            <span class="index-num">02</span>
+            <span class="index-label">// PROGRAM SCHEDULE</span>
+          </div>
+          <h2 class="section-title">TIMETABLE</h2>
+          <div class="section-title-meta">
+            <span class="meta-date">2026.10.31 (SAT)</span>
+            <span class="meta-bar">/</span>
+            <span class="meta-place">階段教室</span>
+          </div>
+          <p class="section-lead">
+            熱狂が連鎖する90分間。2組のバンドによる魂のステージタイムスケジュール。
+          </p>
+        </div>
+
+        <!-- Timetable Cyber Timeline -->
+        <div class="timetable-flow">
+          <!-- Cyber central axis line -->
+          <div class="timeline-axis" aria-hidden="true">
+            <div class="axis-glow-beam"></div>
+          </div>
+
+          <!-- TIMETABLE ITEM 1: ZAKUZAKU -->
+          <article class="timetable-item slot-band" data-reveal="card">
+            <div class="item-time-block">
+              <span class="time-range-badge">ACT 01</span>
+              <div class="time-display">
+                <span class="time-start">13:00</span>
+                <span class="time-divider">―</span>
+                <span class="time-end">13:35</span>
+              </div>
+              <span class="time-duration">35 MIN PERFORMANCE</span>
+            </div>
+
+            <div class="item-card-marker" aria-hidden="true">
+              <span class="marker-dot"></span>
+              <span class="marker-pulse"></span>
+            </div>
+
+            <div class="item-card-content">
+              <div class="card-inner-cyber">
+                <div class="card-top-hud">
+                  <span class="genre-tag">LIVE PERFORMANCE</span>
+                  <span class="order-id">#ACT-01</span>
+                </div>
+                <h3 class="band-name">ZAKUZAKU</h3>
+                <div class="cover-spec-box">
+                  <span class="spec-label">COVERING</span>
+                  <span class="spec-artist">King Gnu</span>
+                </div>
+                <p class="slot-description">
+                  King Gnuのカバーを披露するバンド。緻密なリズムセクションと重厚なアンサンブルで、階段教室を圧倒的な音像で支配するオープニングアクト。
+                </p>
+                <div class="card-corner-decor" aria-hidden="true"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- TIMETABLE ITEM 2: CHANGEOVER (転換時間 20分間) -->
+          <div class="timetable-item slot-changeover" data-reveal="card">
+            <div class="item-time-block">
+              <span class="time-range-badge badge-changeover">INTERMISSION</span>
+              <div class="time-display">
+                <span class="time-start">13:35</span>
+                <span class="time-divider">―</span>
+                <span class="time-end">13:55</span>
+              </div>
+              <span class="time-duration">20 MIN DURATION</span>
+            </div>
+
+            <div class="item-card-marker marker-changeover" aria-hidden="true">
+              <span class="marker-dot"></span>
+            </div>
+
+            <div class="item-card-content">
+              <div class="changeover-box">
+                <div class="changeover-header">
+                  <span class="changeover-icon" aria-hidden="true">⇄</span>
+                  <h3 class="changeover-title">CHANGEOVER</h3>
+                  <span class="changeover-badge">転換時間（20分間）</span>
+                </div>
+                <p class="changeover-desc">
+                  ステージ機材のセッティングおよびサウンドチェックを実施します。次のアクトへ向けた準備時間です。
+                </p>
+                <div class="changeover-cyber-strip" aria-hidden="true">
+                  <span>STAGE SETUP // SOUND CHECK // NEXT: unitown</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIMETABLE ITEM 3: unitown -->
+          <article class="timetable-item slot-band" data-reveal="card">
+            <div class="item-time-block">
+              <span class="time-range-badge badge-headliner">ACT 02 / CLOSING</span>
+              <div class="time-display">
+                <span class="time-start">13:55</span>
+                <span class="time-divider">―</span>
+                <span class="time-end">14:30</span>
+              </div>
+              <span class="time-duration">35 MIN PERFORMANCE</span>
+            </div>
+
+            <div class="item-card-marker marker-headliner" aria-hidden="true">
+              <span class="marker-dot"></span>
+              <span class="marker-pulse"></span>
+            </div>
+
+            <div class="item-card-content">
+              <div class="card-inner-cyber headliner-glow">
+                <div class="card-top-hud">
+                  <span class="genre-tag tag-headliner">LIVE PERFORMANCE</span>
+                  <span class="order-id">#ACT-02</span>
+                </div>
+                <h3 class="band-name">unitown</h3>
+                <div class="cover-spec-box spec-unitown">
+                  <span class="spec-label">COVERING</span>
+                  <span class="spec-artist">UNISON SQUARE GARDEN</span>
+                </div>
+                <p class="slot-description">
+                  UNISON SQUARE GARDENのカバーを披露するバンド。疾走感あふれるハイトーンボイスと変幻自在のスリーピースサウンドで会場の熱気を最高潮へ導く。
+                </p>
+                <div class="card-corner-decor" aria-hidden="true"></div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <!-- Timetable Notice Note -->
+        <div class="timetable-footer-notice" data-reveal="fade">
+          <span class="notice-bullet">※</span>
+          <span>進行状況により、各バンドの開始時刻が若干前後する場合がございます。あらかじめご了承ください。</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER MARQUEE 02 (Reverse Direction) -->
+    <div class="ticker-strip ticker-reverse" aria-hidden="true">
+      <div class="ticker-inner">
+        <div class="ticker-content">
+          <span>FEATURED ARTISTS</span>
+          <span class="ticker-dot">/</span>
+          <span>ZAKUZAKU (King Gnu COVER)</span>
+          <span class="ticker-dot">/</span>
+          <span>unitown (UNISON SQUARE GARDEN COVER)</span>
+          <span class="ticker-dot">/</span>
+          <span>STAGE: 階段教室</span>
+          <span class="ticker-dot">/</span>
+        </div>
+        <div class="ticker-content" aria-hidden="true">
+          <span>FEATURED ARTISTS</span>
+          <span class="ticker-dot">/</span>
+          <span>ZAKUZAKU (King Gnu COVER)</span>
+          <span class="ticker-dot">/</span>
+          <span>unitown (UNISON SQUARE GARDEN COVER)</span>
+          <span class="ticker-dot">/</span>
+          <span>STAGE: 階段教室</span>
+          <span class="ticker-dot">/</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================================
+         SECTION 03: ARTISTS / 出演バンド紹介
+         ============================================== -->
+    <section id="artists" class="artists-section" aria-label="出演バンド紹介">
+      <div class="section-container">
+        <!-- Section Title Header -->
+        <div class="section-title-wrap text-dark" data-reveal="header">
+          <div class="section-index">
+            <span class="index-num">03</span>
+            <span class="index-label">// LINEUP SHOWCASE</span>
+          </div>
+          <h2 class="section-title dark-title">ARTISTS</h2>
+          <div class="section-title-meta dark-meta">
+            <span class="meta-date">2 BANDS SPOTLIGHT</span>
+            <span class="meta-bar">/</span>
+            <span class="meta-place">STAGE LINEUP</span>
+          </div>
+          <p class="section-lead dark-lead">
+            桜理祭のステージを揺らす2組のアーティスト。それぞれの個性とサウンドが激突する。
+          </p>
+        </div>
+
+        <!-- Artists Massive Showcase Cards -->
+        <div class="artists-showcase">
+
+          <!-- ==========================================
+               ARTIST 01: ZAKUZAKU
+               ========================================== -->
+          <article class="artist-card-massive artist-zakuzaku" data-reveal="card">
+            <!-- Giant Number Watermark -->
+            <div class="artist-num-watermark" aria-hidden="true">01</div>
+
+            <div class="artist-card-grid">
+              <!-- Visual / Logo Reserved Column -->
+              <div class="artist-visual-col">
+                <!--
+                  =======================================================
+                  【ロゴ・画像追加用スロット】
+                  ロゴや写真素材がある場合は、以下の div.visual-placeholder 内に
+                  <img src="assets/images/zakuzaku-logo.png" alt="ZAKUZAKU ロゴ" class="artist-logo-img">
+                  を追加・差し替えてください。レイアウトは自動的に適応します。
+                  =======================================================
+                -->
+                <div class="artist-visual-box">
+                  <div class="visual-graphic-layer" aria-hidden="true">
+                    <!-- Futuristic Cyber Polygon & Wave Art for ZAKUZAKU -->
+                    <svg class="cyber-art-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <polygon points="200,30 360,110 360,290 200,370 40,290 40,110" stroke="#147FC1" stroke-width="2" stroke-dasharray="8 4" opacity="0.4"/>
+                      <polygon points="200,60 330,130 330,270 200,340 70,270 70,130" stroke="#39D5FF" stroke-width="1.5" opacity="0.6"/>
+                      <polygon points="200,100 290,150 290,250 200,300 110,250 110,150" fill="rgba(20, 127, 193, 0.08)" stroke="#39D5FF" stroke-width="2"/>
+                      <circle cx="200" cy="200" r="45" stroke="#102E50" stroke-width="1.5"/>
+                      <circle cx="200" cy="200" r="15" fill="#39D5FF"/>
+                      <!-- Dynamic wave lines -->
+                      <path d="M90 200 Q 145 130, 200 200 T 310 200" stroke="#39D5FF" stroke-width="3" fill="none"/>
+                      <path d="M110 215 Q 155 170, 200 215 T 290 215" stroke="#147FC1" stroke-width="2" fill="none"/>
+                    </svg>
+                  </div>
+
+                  <!-- Slot Content (Placeholder & Logo Slot) -->
+                  <div class="slot-interactive-hud">
+                    <div class="hud-corner tl"></div>
+                    <div class="hud-corner tr"></div>
+                    <div class="hud-corner bl"></div>
+                    <div class="hud-corner br"></div>
+
+                    <!-- ロゴ画像プレースホルダー表示（ロゴ素材が追加されたらここにimgが入ります） -->
+                    <div class="logo-slot-container" id="zakuzaku-logo-slot">
+                      <div class="slot-badge-tag">LOGO AREA</div>
+                      <div class="slot-brand-mark">ZAKUZAKU</div>
+                      <span class="slot-status-notice">[ OFFICIAL LOGO RESERVED ]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Information & Profile Text Column -->
+              <div class="artist-info-col">
+                <div class="artist-header-meta">
+                  <span class="artist-badge">BAND 01</span>
+                  <span class="artist-time-tag">OCT 31 // 13:00 - 13:35</span>
+                </div>
+
+                <h3 class="artist-title-huge">ZAKUZAKU</h3>
+
+                <!-- Cover Information -->
+                <div class="artist-cover-tagbox">
+                  <span class="cover-eyebrow">COVER ARTIST</span>
+                  <p class="cover-target-name">King Gnu</p>
+                </div>
+
+                <!--
+                  =======================================================
+                  【紹介文追加用スロット】
+                  各バンドの紹介文が決まりましたら、以下の div.profile-slot-content 内の
+                  段落 (<p>) を差し替えまたは追記してください。
+                  =======================================================
+                -->
+                <div class="artist-profile-area" id="zakuzaku-profile-slot">
+                  <div class="profile-slot-header">
+                    <span class="profile-slot-label">// BAND PROFILE</span>
+                    <span class="profile-slot-status">PROFILE WILL BE UPDATED</span>
+                  </div>
+                  <div class="profile-slot-content">
+                    <p class="profile-notice-text">
+                      King Gnuのオルタナティブ・ロックと緻密なポップセンスを追求したステージ。
+                      詳細なバンドプロフィールおよびメンバーメッセージは近日公開予定です。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Spec HUD Micro Data -->
+                <div class="artist-spec-hud">
+                  <div class="spec-cell">
+                    <span class="spec-k">ORDER</span>
+                    <span class="spec-v">1ST ACT</span>
+                  </div>
+                  <div class="spec-cell">
+                    <span class="spec-k">SET TIME</span>
+                    <span class="spec-v">35 MIN</span>
+                  </div>
+                  <div class="spec-cell">
+                    <span class="spec-k">STAGE</span>
+                    <span class="spec-v">階段教室</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- ==========================================
+               ARTIST 02: unitown
+               ========================================== -->
+          <article class="artist-card-massive artist-unitown" data-reveal="card">
+            <!-- Giant Number Watermark -->
+            <div class="artist-num-watermark" aria-hidden="true">02</div>
+
+            <div class="artist-card-grid">
+              <!-- Visual / Logo Reserved Column -->
+              <div class="artist-visual-col">
+                <!--
+                  =======================================================
+                  【ロゴ・画像追加用スロット】
+                  ロゴや写真素材がある場合は、以下の div.visual-placeholder 内に
+                  <img src="assets/images/unitown-logo.png" alt="unitown ロゴ" class="artist-logo-img">
+                  を追加・差し替えてください。レイアウトは自動的に適応します。
+                  =======================================================
+                -->
+                <div class="artist-visual-box visual-box-cyan">
+                  <div class="visual-graphic-layer" aria-hidden="true">
+                    <!-- Speed & Dynamic Orbit Graphic for unitown -->
+                    <svg class="cyber-art-svg" viewBox="0 0 400 400" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="200" cy="200" r="150" stroke="#39D5FF" stroke-width="1.5" stroke-dasharray="12 6" opacity="0.6"/>
+                      <circle cx="200" cy="200" r="110" stroke="#147FC1" stroke-width="2" opacity="0.5"/>
+                      <ellipse cx="200" cy="200" rx="170" ry="60" stroke="#39D5FF" stroke-width="2" transform="rotate(-30 200 200)" opacity="0.8"/>
+                      <ellipse cx="200" cy="200" rx="170" ry="60" stroke="#102E50" stroke-width="1.5" transform="rotate(30 200 200)" opacity="0.6"/>
+                      <circle cx="200" cy="200" r="30" fill="rgba(57, 213, 255, 0.15)" stroke="#39D5FF" stroke-width="2"/>
+                      <line x1="60" y1="200" x2="340" y2="200" stroke="#39D5FF" stroke-width="1.5" stroke-dasharray="4 4"/>
+                    </svg>
+                  </div>
+
+                  <!-- Slot Content (Placeholder & Logo Slot) -->
+                  <div class="slot-interactive-hud">
+                    <div class="hud-corner tl"></div>
+                    <div class="hud-corner tr"></div>
+                    <div class="hud-corner bl"></div>
+                    <div class="hud-corner br"></div>
+
+                    <!-- ロゴ画像プレースホルダー表示（ロゴ素材が追加されたらここにimgが入ります） -->
+                    <div class="logo-slot-container" id="unitown-logo-slot">
+                      <div class="slot-badge-tag tag-cyan">LOGO AREA</div>
+                      <div class="slot-brand-mark mark-unitown">unitown</div>
+                      <span class="slot-status-notice">[ OFFICIAL LOGO RESERVED ]</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Information & Profile Text Column -->
+              <div class="artist-info-col">
+                <div class="artist-header-meta">
+                  <span class="artist-badge badge-unitown">BAND 02</span>
+                  <span class="artist-time-tag">OCT 31 // 13:55 - 14:30</span>
+                </div>
+
+                <h3 class="artist-title-huge">unitown</h3>
+
+                <!-- Cover Information -->
+                <div class="artist-cover-tagbox tagbox-unitown">
+                  <span class="cover-eyebrow">COVER ARTIST</span>
+                  <p class="cover-target-name">UNISON SQUARE GARDEN</p>
+                </div>
+
+                <!--
+                  =======================================================
+                  【紹介文追加用スロット】
+                  各バンドの紹介文が決まりましたら、以下の div.profile-slot-content 内の
+                  段落 (<p>) を差し替えまたは追記してください。
+                  =======================================================
+                -->
+                <div class="artist-profile-area" id="unitown-profile-slot">
+                  <div class="profile-slot-header">
+                    <span class="profile-slot-label">// BAND PROFILE</span>
+                    <span class="profile-slot-status">PROFILE WILL BE UPDATED</span>
+                  </div>
+                  <div class="profile-slot-content">
+                    <p class="profile-notice-text">
+                      UNISON SQUARE GARDENの鮮烈なエッジとスピーディなアンサンブルを再現するステージ。
+                      詳細なバンドプロフィールおよびメンバーメッセージは近日公開予定です。
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Spec HUD Micro Data -->
+                <div class="artist-spec-hud">
+                  <div class="spec-cell">
+                    <span class="spec-k">ORDER</span>
+                    <span class="spec-v">CLOSING ACT</span>
+                  </div>
+                  <div class="spec-cell">
+                    <span class="spec-k">SET TIME</span>
+                    <span class="spec-v">35 MIN</span>
+                  </div>
+                  <div class="spec-cell">
+                    <span class="spec-k">STAGE</span>
+                    <span class="spec-v">階段教室</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==============================================
+         SECTION 04: INFORMATION / 開催情報
+         ============================================== -->
+    <section id="information" class="information-section" aria-label="開催情報">
+      <div class="section-container">
+        <!-- Section Title Header -->
+        <div class="section-title-wrap" data-reveal="header">
+          <div class="section-index">
+            <span class="index-num">04</span>
+            <span class="index-label">// EVENT DETAILS</span>
+          </div>
+          <h2 class="section-title">INFORMATION</h2>
+          <div class="section-title-meta">
+            <span class="meta-date">EVENT OVERVIEW</span>
+            <span class="meta-bar">/</span>
+            <span class="meta-place">GUIDE</span>
+          </div>
+          <p class="section-lead">
+            桜理祭 軽音楽部 LIVE 2026 の開催概要です。皆様のご来場を心よりお待ちしております。
+          </p>
+        </div>
+
+        <!-- Information Cyber Grid Display -->
+        <div class="info-cyber-dashboard" data-reveal="card">
+          <!-- Main Event Title Banner -->
+          <div class="info-event-hero-banner">
+            <span class="banner-badge">FESTIVAL LIVE 2026</span>
+            <h3 class="banner-title">桜理祭 LIVE 2026</h3>
+            <p class="banner-sub">軽音楽部 SPECIAL STAGE</p>
+          </div>
+
+          <!-- 3-Column Info Cards -->
+          <div class="info-card-deck">
+            <!-- Card 1: DATE -->
+            <div class="info-deck-card">
+              <div class="card-edge-glow"></div>
+              <div class="deck-card-top">
+                <span class="deck-card-label">DATE</span>
+                <span class="deck-card-code">01/03</span>
+              </div>
+              <div class="deck-card-main">
+                <div class="deck-giant-text">10.31</div>
+                <div class="deck-sub-text">2026年 10月31日（土）</div>
+              </div>
+              <div class="deck-card-foot">
+                <span class="deck-foot-badge">SCHEDULED</span>
+              </div>
+            </div>
+
+            <!-- Card 2: TIME -->
+            <div class="info-deck-card">
+              <div class="card-edge-glow"></div>
+              <div class="deck-card-top">
+                <span class="deck-card-label">TIME</span>
+                <span class="deck-card-code">02/03</span>
+              </div>
+              <div class="deck-card-main">
+                <div class="deck-giant-text time-text">13:00<span class="deck-sep">〜</span>14:30</div>
+                <div class="deck-sub-text">開演 13:00 / 終演 14:30（予定）</div>
+              </div>
+              <div class="deck-card-foot">
+                <span class="deck-foot-badge">TOTAL 90 MIN</span>
+              </div>
+            </div>
+
+            <!-- Card 3: VENUE -->
+            <div class="info-deck-card">
+              <div class="card-edge-glow"></div>
+              <div class="deck-card-top">
+                <span class="deck-card-label">VENUE</span>
+                <span class="deck-card-code">03/03</span>
+              </div>
+              <div class="deck-card-main">
+                <div class="deck-giant-text venue-text">階段教室</div>
+                <div class="deck-sub-text">校内 階段教室ステージ</div>
+              </div>
+              <div class="deck-card-foot">
+                <span class="deck-foot-badge">ADMISSION FREE</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Cyber Grid Specs -->
+          <div class="info-bottom-terminal">
+            <div class="terminal-header">
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-dot"></span>
+              <span class="terminal-title">LIVE SPECIFICATION CONSOLE</span>
+            </div>
+            <div class="terminal-body">
+              <div class="term-row">
+                <span class="term-k">EVENT NAME</span>
+                <span class="term-v">桜理祭 LIVE 2026</span>
+              </div>
+              <div class="term-row">
+                <span class="term-k">ORGANIZER</span>
+                <span class="term-v">軽音楽部</span>
+              </div>
+              <div class="term-row">
+                <span class="term-k">DATE & TIME</span>
+                <span class="term-v">2026年10月31日（土） 13:00〜14:30</span>
+              </div>
+              <div class="term-row">
+                <span class="term-k">STAGE LOCATION</span>
+                <span class="term-v">階段教室</span>
+              </div>
+              <div class="term-row">
+                <span class="term-k">THEME</span>
+                <span class="term-v">鳴り響け僕なりの音</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==============================================
+       SITE FOOTER
+       ============================================== -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-top-row">
+        <div class="footer-brand">
+          <div class="footer-logo-text">SAKURASAI LIVE 2026</div>
+          <p class="footer-sub-text">桜理祭 軽音楽部 公式Webサイト</p>
+        </div>
+        <div class="footer-scroll-top">
+          <a href="#top" id="back-to-top" class="back-to-top-btn" aria-label="ページトップへ戻る">
+            <span class="btn-arrow">↑</span>
+            <span class="btn-text">PAGE TOP</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-divider-line"></div>
+
+      <div class="footer-bottom-row">
+        <p class="footer-copyright">
+          &copy; 2026 桜理祭 軽音楽部 LIVE. All Rights Reserved.
+        </p>
+        <div class="footer-badge-tag">
+          OFFICIAL LIVE FESTIVAL
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript File -->
+  <script src="js/main.js"></script>
+</body>
+</html>
