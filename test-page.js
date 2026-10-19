@@ -56,20 +56,6 @@ const { chromium } = require('playwright');
   });
   console.log('Mobile Horizontal Overflow:', mobileOverflow ? 'FAIL (Horizontal scroll exists!)' : 'PASS (No overflow)');
 
-  // Test Mobile Drawer
-  console.log('Testing mobile menu toggle...');
-  await page.click('#menu-toggle');
-  await page.waitForTimeout(400);
-  const isDrawerOpen = await page.evaluate(() => {
-    return document.getElementById('mobile-drawer').classList.contains('is-open');
-  });
-  console.log('Mobile Drawer Open Status:', isDrawerOpen ? 'PASS' : 'FAIL');
-  await page.screenshot({ path: 'screenshot-sp-drawer.png' });
-
-  // Close mobile menu
-  await page.click('#menu-toggle');
-  await page.waitForTimeout(400);
-
   // Scroll through sections to verify reveal
   console.log('Testing full page scroll...');
   await page.evaluate(() => window.scrollTo(0, document.body.scrollHeight));

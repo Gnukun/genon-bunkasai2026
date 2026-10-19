@@ -1,6 +1,6 @@
 /**
  * SAKURASAI LIVE 2026 - OFFICIAL INTERACTION SCRIPT
- * Features: Fixed Navigation Scrollspy, Mobile Drawer,
+ * Features: Fixed Navigation Scrollspy,
  *           Scroll Reveal Observer, Ambient Cyber Audio-Wave Canvas,
  *           Accessible Reduced Motion Support.
  * Audio: No background music or sound effects (100% silent).
@@ -20,7 +20,6 @@
   const header = document.getElementById('site-header');
   const sections = document.querySelectorAll('section[id]');
   const desktopNavLinks = document.querySelectorAll('.desktop-nav .nav-link');
-  const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
   function handleHeaderScroll() {
     if (!header) return;
@@ -43,14 +42,6 @@
       }
     });
 
-    mobileNavLinks.forEach((link) => {
-      const href = link.getAttribute('href');
-      if (href === `#${currentId}`) {
-        link.classList.add('active');
-      } else {
-        link.classList.remove('active');
-      }
-    });
   }
 
   // Scrollspy via Intersection Observer
@@ -78,63 +69,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // 03. Mobile Drawer Navigation
-  // --------------------------------------------------------------------------
-  const menuToggle = document.getElementById('menu-toggle');
-  const mobileDrawer = document.getElementById('mobile-drawer');
-  const drawerCloseBtn = document.getElementById('drawer-close-btn');
-
-  function openMobileMenu() {
-    if (!menuToggle || !mobileDrawer) return;
-    menuToggle.classList.add('is-open');
-    menuToggle.setAttribute('aria-expanded', 'true');
-    menuToggle.setAttribute('aria-label', 'メニューを閉じる');
-    mobileDrawer.classList.add('is-open');
-    mobileDrawer.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
-  }
-
-  function closeMobileMenu() {
-    if (!menuToggle || !mobileDrawer) return;
-    menuToggle.classList.remove('is-open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-    menuToggle.setAttribute('aria-label', 'メニューを開く');
-    mobileDrawer.classList.remove('is-open');
-    mobileDrawer.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  if (menuToggle && mobileDrawer) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = menuToggle.classList.contains('is-open');
-      if (isOpen) {
-        closeMobileMenu();
-      } else {
-        openMobileMenu();
-      }
-    });
-
-    if (drawerCloseBtn) {
-      drawerCloseBtn.addEventListener('click', closeMobileMenu);
-    }
-
-    // Close when clicking any link in drawer
-    mobileNavLinks.forEach((link) => {
-      link.addEventListener('click', () => {
-        closeMobileMenu();
-      });
-    });
-
-    // Close on Escape key press
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileDrawer.classList.contains('is-open')) {
-        closeMobileMenu();
-      }
-    });
-  }
-
-  // --------------------------------------------------------------------------
-  // 04. Smooth Scroll for Navigation Anchors
+  // 03. Smooth Scroll for Navigation Anchors
   // --------------------------------------------------------------------------
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
@@ -162,7 +97,7 @@
   });
 
   // --------------------------------------------------------------------------
-  // 05. Scroll Reveal Animations (Intersection Observer)
+  // 04. Scroll Reveal Animations (Intersection Observer)
   // --------------------------------------------------------------------------
   function initScrollReveal() {
     const revealElements = document.querySelectorAll('[data-reveal]');
@@ -202,7 +137,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // 06. Ambient Cyber Soundwave Canvas Animation
+  // 05. Ambient Cyber Soundwave Canvas Animation
   // --------------------------------------------------------------------------
   function initCyberCanvas() {
     const canvas = document.getElementById('cyber-canvas');
@@ -317,7 +252,7 @@
   }
 
   // --------------------------------------------------------------------------
-  // 07. Initialization on DOMContentLoaded
+  // 06. Initialization on DOMContentLoaded
   // --------------------------------------------------------------------------
   function init() {
     document.documentElement.classList.add('js-ready');

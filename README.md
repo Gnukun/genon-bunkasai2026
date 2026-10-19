@@ -52,9 +52,9 @@ BUNKASAI/
 
 3. 以下のように `<img>` タグを指定します：
    ```html
-   <!-- ZAKUZAKU の場合 -->
+   <!-- ZAKU ZAKU の場合 -->
    <div class="logo-slot-container" id="zakuzaku-logo-slot">
-     <img src="assets/images/zakuzaku-logo.png" alt="ZAKUZAKU ロゴ" class="artist-logo-img">
+     <img src="assets/images/zakuzaku-logo.png" alt="ZAKU ZAKU ロゴ" class="artist-logo-img">
    </div>
    ```
    ※ `.artist-logo-img` クラスにより、アスペクト比を保ったまま自動で最適なサイズにフィットします。
@@ -80,7 +80,7 @@ BUNKASAI/
 1. **セクション構成**:
    - `SECTION 01: HERO`（巨大タイポグラフィ、キャッチコピー、一目でわかる日時・会場HUD）
    - `TICKER 01`（横スクロール無限マーキー）
-   - `SECTION 02: TIMETABLE`（ディープネイビー背景、シアン光軸、ZAKUZAKU、CHANGEOVER 20分、unitown。※準備時間は完全非掲載）
+   - `SECTION 02: TIMETABLE`（ディープネイビー背景、シアン光軸、ZAKU ZAKU、CHANGEOVER 20分、unitown。※準備時間は完全非掲載）
    - `TICKER 02`（逆方向マーキー）
    - `SECTION 03: ARTISTS`（1バンド1画面級の大迫力カード、01/02特大ナンバリング、King Gnu / UNISON SQUARE GARDEN カバー明記）
    - `SECTION 04: INFORMATION`（3カラム情報カード、サイバーターミナルスペックコンソール）
