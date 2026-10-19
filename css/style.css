@@ -2148,6 +2148,33 @@ section {
   }
 
   /* Hero */
+  .hero-container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .hero-typography {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .typo-line {
+    gap: 0.5rem;
+    max-width: 100%;
+  }
+
+  .eng-massive {
+    max-width: 100%;
+    font-size: clamp(2rem, 10.5vw, 4rem);
+    letter-spacing: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .year-num::after {
+    right: -1.25rem;
+    font-size: 0.6rem;
+  }
+
   .hero-hud-top {
     flex-direction: column;
     align-items: flex-start;
@@ -2157,6 +2184,19 @@ section {
   .info-hud-grid {
     grid-template-columns: 1fr;
     gap: 1.25rem;
+  }
+
+  .stage-val .stage-name,
+  .meta-place,
+  .spec-v,
+  .venue-text,
+  .deck-sub-text {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+
+  .stage-val .stage-name {
+    line-height: 1.35;
   }
 
   .info-hud-col:not(:last-child)::after {
